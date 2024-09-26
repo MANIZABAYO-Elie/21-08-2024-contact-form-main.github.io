@@ -10,7 +10,7 @@
 <body>
     <div class="contact-form">
         <h1>Contact Us</h1>
-        <form id="contact-form">
+        <form id="contact">
             <div class="form-item">
                 <div class="first-name">
                     <label for="firstname">First Name<span class="required">*</span></label>
@@ -46,11 +46,17 @@
                     <label for="consent">I consent to being contacted by the team</label>
                 </div>
             </div>
+            <p id="error" style="display:none;">Please enter</p>
+            <p id="success">
+                form is submitted successfully
+            </p>
             <button class="submit-button">Submit</button>
     </div>
     </form>
     </div>
+<script src="script.js">
 
+</script>
 </body>
 
 </html>
