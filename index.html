@@ -10,7 +10,7 @@
 <body>
     <div class="contact-form">
         <h1>Contact Us</h1>
-        <form id="contact">
+        <form id="contact-fm">
             <div class="form-item">
                 <div class="first-name">
                     <label for="firstname">First Name<span class="required">*</span></label>
@@ -19,11 +19,17 @@
                 <div class="last-name">
                     <label for="lastname">Last Name <span class="required">*</span></label>
                     <input type="text" id="last-name" name="Last Name" required>
+
                 </div>
+            <p class="form-alert" style="display: none;">This field is required</p>
             </div>
             <div class="form-item">
                 <label for="email">Email Address<span class="required">*</span></label>
                 <input type="email" id="email" name="Email" required>
+                 <p class="form-alert" style="display: none;">
+                    Please enter a valid email adress
+
+                 </p>
             </div>
             <div class="form-item">
                 <label for="query-type">Query Type<span class="required">*</span></label>
@@ -47,7 +53,7 @@
                 </div>
             </div>
             <p id="error" style="display:none;">Please enter</p>
-            <p id="success">
+            <p id="success" style="display: none;">
                 form is submitted successfully
             </p>
             <button class="submit-button">Submit</button>
