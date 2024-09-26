@@ -45,4 +45,45 @@ if(!isValidEmail(email)){
     document.querySelector('#email').style.border = " 1px solid gray";
 
 }
+// query type validation
+if(!queryType){
+    isValid=false
+    document.querySelector('.radio-inputs + .form-alert').style.display = "block";
+    
+    
+   }else{
+       document.querySelector('.radio-inputs + .form-alert').style.display = "none";
+       
+   
+   }
+ // Message Validation
+ if(message===""){
+    isValid=false
+    document.querySelector('#message + .form-alert').style.display = "block";
+    document.querySelector('#email').style.border = " 1px solid red";
+    
+   }else{
+       document.querySelector('#message + .form-alert').style.display = "none";
+       document.querySelector('#email').style.border = " 1px solid gray";
+       
+   
+   }
+   // contest validation
+   if(!contest){
+    isValid= false
+    formAlert[5].classList.add('form-error');
+    } else{
+        formAlert[5].classList.remove('form-error')
+    }
+    // form is valid
+    if(isValid){
+        successmessage.classList.add('active')
+        formAlert.rest()
+    }
+
 })
+// email validation function
+function isValidEmail(){
+    const emailRegex = '/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/';
+    return emailRegex.test(email);
+}
