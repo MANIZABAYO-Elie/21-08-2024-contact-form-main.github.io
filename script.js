@@ -45,7 +45,7 @@ if(!isValidEmail(email)){
     document.querySelector('#email').style.border = " 1px solid gray";
 
 }
-// query type validation
+// query-type validation
 if(!queryType){
     isValid=false
     document.querySelector('.radio-inputs + .form-alert').style.display = "block";
